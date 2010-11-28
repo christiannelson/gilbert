@@ -7,6 +7,10 @@ Requirements:
 * redis 2.0+
 * node.js 0.2.4+
 
+
+*Make sure you have all of the git submodules in place*
+$ git submodule update --init --recursive
+
 *First time setup*
 $ rake db:create db:reset
 
