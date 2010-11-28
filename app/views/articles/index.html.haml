@@ -1,0 +1,29 @@
+- content_for :page_class do
+  articles_index
+
+%h2 Listing articles
+
+%table
+  %tr
+    %th Title
+    %th Author
+    %th Published at
+    %th Length (words)
+    %th Comments
+    %th
+    %th
+    %th
+
+  - @articles.each do |article|
+    %tr
+      %td= article.title
+      %td= article.author
+      %td= article.published_at
+      %td= article.content.split.size
+      %td= article.comments.size
+      %td= link_to 'Show', article
+      %td= link_to 'Edit', edit_article_path(article)
+      %td= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete
+
+.actions
+  = link_to 'New Article', new_article_path

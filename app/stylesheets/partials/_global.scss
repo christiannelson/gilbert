@@ -1,0 +1,24 @@
+@import "compass/layout.scss";
+
+@include sticky-footer(35px, "#layout", "#layout_footer", "#footer");
+
+body {
+  width: $blueprint-container-size;
+  margin: 0 auto;
+}
+
+#layout, #footer {
+  padding: 0 20px;
+}
+
+#footer {
+  p {
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+}
+
+
+.actions {
+  margin-top: 20px;
+}

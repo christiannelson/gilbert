@@ -1,0 +1,25 @@
+- content_for :page_class do
+  articles_show
+- content_for :head do
+  = javascript_include_tag 'articles/show.onready.js'
+
+.article{:data => {:comments => article_comments_path(@article), :channel => @article.channel}}
+  %h2= @article.title
+  %p.meta
+    Published by #{@article.author} at #{@article.published_at}
+  = simple_format(@article.content)
+
+%h2 Comments
+%ul.comments
+
+%h3 Add a Comment
+
+= form_for([@article, @article.comments.build]) do |f|
+  = f.text_area :content, :rows => 3
+  %br
+  as
+  = f.text_field :author
+  = f.submit
+
+.actions
+  = link_to 'Back', articles_path

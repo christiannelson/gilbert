@@ -1,16 +1,25 @@
 source 'http://rubygems.org'
 
+# Primary rails application
+gem 'rails', '~> 3.0'
+gem 'haml-rails'
+gem 'compass'
+gem 'mysql2'
 gem 'unicorn'
 
-gem 'rails', '~> 3.0'
-gem 'eventmachine', '>= 1.0.0.beta.2'
-gem 'em-websocket'
-gem 'em-redis'
+# Evented server
+gem 'juggernaut'
+#gem 'eventmachine', '>= 1.0.0.beta.2'
+#gem 'em-websocket'
+#gem 'em-redis'
 
+# Everything else
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails', '>= 1.1.beta1'
   gem 'webrat'
+
+  gem 'faker'
 end
 
 

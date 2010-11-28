@@ -1,4 +1,11 @@
 Gilbert::Application.routes.draw do
+
+  root :to => 'articles#index' 
+
+  resources :articles do
+    resources :comments, :only => [:index, :create]
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

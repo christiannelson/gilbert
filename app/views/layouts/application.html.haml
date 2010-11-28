@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Gilbert
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    = javascript_include_tag 'ext/jquery-1.4.4', 'ext/jquery.template', 'ext/jquery.form', 'ext/rails'
+    = javascript_include_tag 'ext/json', 'ext/socket_io', 'ext/juggernaut'
+    = javascript_include_tag 'application'
+    = yield :head
+    = csrf_meta_tag
+  %body.bp.one-column
+    #layout
+      #header
+        %h1= Gilbert
+
+      #content{:class => (yield :page_class) }
+        %p#notice= notice
+        = yield
+
+    #footer
+      %p= "Created by Christian to learn more about websockets and evented programming."
