@@ -32,13 +32,8 @@ GEM
     builder (2.1.2)
     compass (0.10.6)
       haml (>= 3.0.4)
-    diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    factory_girl (2.0.0.beta1)
-    factory_girl_rails (1.1.beta1)
-      factory_girl (~> 2.0.0.beta)
-      rails (>= 3.0.0)
     faker (0.3.1)
     haml (3.0.24)
     haml-rails (0.3.4)
@@ -57,7 +52,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mysql2 (0.2.6)
-    nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -79,16 +73,6 @@ GEM
       thor (~> 0.14.4)
     rake (0.8.7)
     redis (2.1.1)
-    rspec (2.1.0)
-      rspec-core (~> 2.1.0)
-      rspec-expectations (~> 2.1.0)
-      rspec-mocks (~> 2.1.0)
-    rspec-core (2.1.0)
-    rspec-expectations (2.1.0)
-      diff-lcs (~> 1.1.2)
-    rspec-mocks (2.1.0)
-    rspec-rails (2.1.0)
-      rspec (~> 2.1.0)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
@@ -96,22 +80,15 @@ GEM
     unicorn (3.0.0)
       kgio (~> 2.0.0)
       rack
-    webrat (0.7.2)
-      nokogiri (>= 1.2.0)
-      rack (>= 1.0)
-      rack-test (>= 0.5.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   compass
-  factory_girl_rails (>= 1.1.beta1)
   faker
   haml-rails
   juggernaut
   mysql2
   rails (~> 3.0)
-  rspec-rails
   unicorn
-  webrat

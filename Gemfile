@@ -15,9 +15,9 @@ gem 'juggernaut'
 
 # Everything else
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails', '>= 1.1.beta1'
-  gem 'webrat'
+  #gem 'rspec-rails'
+  #gem 'factory_girl_rails', '>= 1.1.beta1'
+  #gem 'webrat'
 
   gem 'faker'
 end
